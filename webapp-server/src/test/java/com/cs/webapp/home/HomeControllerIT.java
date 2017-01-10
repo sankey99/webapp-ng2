@@ -1,4 +1,4 @@
-package securefact.webapp.home;
+package com.cs.webapp.home;
 
 import static org.junit.Assert.assertNotNull;
 
