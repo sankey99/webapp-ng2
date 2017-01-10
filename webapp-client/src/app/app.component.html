@@ -1,0 +1,14 @@
+<!--Top header bar  -->
+<top-bar></top-bar>
+<div class="main-panel  container-fluid" >
+<!-- side bar -->
+	<div *ngIf="showLeftNav" class="left-nav">
+		<left-nav></left-nav>
+	</div>
+
+	
+	<div class="container router-panel">
+		<router-outlet></router-outlet>
+	</div>
+	
+</div>

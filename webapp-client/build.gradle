@@ -1,0 +1,59 @@
+plugins {
+	id "com.moowork.node" version "0.13"
+}
+
+//def generatedWebResources = "${buildDir}/generated-web-resources"
+
+/*sourceSets {
+	main {
+		output.dir(generatedWebResources, builtBy: 'npm_run_build')
+	}
+}*/
+
+task zipClient(dependsOn: 'npm_run_build',  type: Zip) {
+    from ('dist/')
+    into 'BOOT-INF/classes/static'
+    archiveName 'resources.zip'
+    destinationDir file('build')
+}
+configurations { zip }
+artifacts { zip zipClient }
+
+// configure gradle-node-plugin
+node {
+	version = '6.9.2'
+	npmVersion = '3.10.9'
+	download = true
+	workDir = file("${project.projectDir}/node")
+	nodeModulesDir = file("${project.projectDir}/")
+}
+
+// clean node/node_modules/dist
+task npmClean(type: Delete) {
+	final def webDir = "${rootDir}/webapp-client"
+	delete "${webDir}/node_modules"
+	delete "${webDir}/dist"
+	delete "${webDir}/coverage"
+}
+
+// clean task for npm
+task clean {}
+clean.dependsOn(npmClean)
+
+// build task for npm
+task build {}
+build.dependsOn(npm_install)
+build.dependsOn(zipClient)
+
+// assemble task for npm
+task assemble {}
+assemble.dependsOn(build)
+
+// check task for npm
+task check {}
+check.dependsOn(npm_run_test)
+
+// run all task
+task runAll{}
+runAll.dependsOn(npm_run_start)
+

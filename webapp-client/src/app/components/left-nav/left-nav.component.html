@@ -1,0 +1,14 @@
+<div  *ngIf="showLeftNav" class="main-panel  container-fluid">
+	<div  class="left-nav">
+		<ul>
+	        <li class="active"><Label><a href="#">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></Label></li>
+	        <li>
+	          <Label>Features <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></Label>
+	          <ul class="" role="menu">
+	            <li><a routerLink="/feature1" routerLinkActive="active">{{'Feature1.title' | translate}}</a></li>
+	            <li><a routerLink="/feature2" routerLinkActive="active">{{'Feature2.title' | translate}}</a></li>
+	            <li><a routerLink="/intro" routerLinkActive="active">{{'intro.title' | translate }}</a></li>
+	          </ul>
+	        </li>          
+	      </ul>
+	</div>

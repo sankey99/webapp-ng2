@@ -1,0 +1,10 @@
+{
+    "TITLE": "FR-Hello Angular 2 with ng2-translate!",
+    "CHOOSE_LANG": "FR-Change language",
+    "title":"FR-Hello ng-2",
+    "Feature1.title":"FR-Feature1",
+   "Feature2.title":"FR-Feature2",
+    "Feature1":"fr-Feature one works",
+     "page.not.found": "FR-Page not found",
+     "lang":"English"
+}
