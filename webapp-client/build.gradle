@@ -12,7 +12,7 @@ plugins {
 
 task zipClient(dependsOn: 'npm_run_build',  type: Zip) {
     from ('dist/')
-    into 'BOOT-INF/classes/static'
+    into 'static'
     archiveName 'resources.zip'
     destinationDir file('build')
 }

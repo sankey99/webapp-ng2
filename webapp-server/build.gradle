@@ -23,7 +23,7 @@ task merge(dependsOn: configurations.merge, type: Zip) {
 
 task copyClientResources(type: Copy) {
     def zipFile = file("${buildDir}/${project.name}.zip")
-    def outputDir = file("${buildDir}/resources/main")
+    def outputDir = file("${projectDir}/src/main/resources")
  
     from zipTree(zipFile)
     into outputDir

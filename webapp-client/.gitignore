@@ -1,0 +1,7 @@
+/build/
+/dist/
+/node/
+/node_modules/
+.project
+/.settings/
+.classpath
