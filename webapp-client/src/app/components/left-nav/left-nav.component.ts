@@ -13,14 +13,14 @@ import {  Router } from '@angular/router';
           >
           </nav-item>
         </div>
-	  </div>`,
-  styleUrls: []
+	  </div>`
+  // , styleUrls: []
 })
 export class LeftNavComponent implements OnInit {
   
   // @Input() navItems={};
 // TODO - set navItems dynamically from app/module
-navItems=[
+ navItems=[
       {title:"Feature1.title", url:"/feature1"},
       {title:"Feature2.title", url:"/feature2"},
       {title:"Intro.title", url:"/intro"}

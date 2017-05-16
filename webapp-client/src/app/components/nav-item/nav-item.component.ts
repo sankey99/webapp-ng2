@@ -4,8 +4,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   selector: 'nav-item',
   template: `<div class="container-fluid" (click)="onItemSelect(this)">
                 {{navItem.title | translate}}
-            </div>`,
-  styleUrls: []
+            </div>`
+  // ,styleUrls: []
 })
 export class NavItemComponent implements OnInit {
 
