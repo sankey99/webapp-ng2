@@ -1,15 +1,56 @@
+buildscript {
+    ext['hibernate.version'] = '5.2.10.Final'
+    ext['jetty.version'] = '9.4.5.v20170502'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE'
+    }
+}
+
 apply plugin: 'java'
-apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'maven-publish'
+
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
-dependencies {
-    // The production code uses Guava
-    //compile 'com.google.guava:guava:20.0'
-
-    // Use JUnit test framework
-    testCompile 'junit:junit:4.12'
+jar {
+    baseName = 'com.cs.common'
+    version = '0.1.0.SNAPSHOT'
 }
 
+//bootRepackage {
+//    enabled = false
+//}
+
+dependencies {
+
+    compile('org.springframework.boot:spring-boot-starter-web:1.5.3.RELEASE'){
+        exclude group:'org.springframework.boot', module : 'spring-boot-starter-tomcat'
+    }
+    compile 'org.springframework.boot:spring-boot-starter-jetty:1.5.3.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa:1.5.3.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-test:1.5.3.RELEASE'
+    compile 'org.postgresql:postgresql:9.4.1212'
+    compile 'com.zaxxer:HikariCP:2.6.1'
+
+    testCompile 'org.postgresql:postgresql:9.4.1212'
+    testCompile 'com.h2database:h2:1.4.195'
+//    testCompile 'junit:junit:4.12'
+    testCompile 'org.testng:testng:6.9.6'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}

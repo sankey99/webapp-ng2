@@ -1,0 +1,13 @@
+domainPackage : com.cs.common.persistence.domain
+
+dataSource:
+    type  : com.zaxxer.hikari.HikariDataSource
+    dataSourceClassName : org.postgresql.ds.PGPoolingDataSource
+    dataSourceProperties  :
+      url            : jdbc:postgresql://localhost:5432/test
+      user       : admin
+      password       : admin
+
+hibernate:
+  hbm2ddl.auto: none
+  dialect: org.hibernate.dialect.PostgreSQLDialect

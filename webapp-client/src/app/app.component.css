@@ -5,13 +5,14 @@
 	padding-top:5px;
 	outline: 1px solid;
 	background-color:#eeeeee;
+	position:fixed;
 }
 .main-panel{
 	position:relative;
 	margin-top:80px;
 }
 .router-panel{
-	width: 80%;
+	width: 60%;
 	overflow: hidden;
 }
 

@@ -1,2 +1,5 @@
 .DS_Store
 common-persistence/.settings/
+.*
+common-persistence/build
+common-persistence/target
