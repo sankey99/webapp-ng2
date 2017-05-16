@@ -7,7 +7,9 @@ prequisites
 4. install angular-cli
 
 Quick start -> fire up angular 2 client app on lite server
+
 cd $webapp-ng2/webapp-client
+
 $ ng serve
 
 Build whole application
