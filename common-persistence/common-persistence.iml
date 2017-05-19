@@ -52,11 +52,22 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/1.5.3.RELEASE/c04072c6637e9a7798ef152dc04581d2644b56ed/spring-boot-starter-test-1.5.3.RELEASE.jar!/"/>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.atomikos/transactions-hibernate4/4.0.4/3bd617168addfc0ef71a4eb5ceeb227b18b5ed03/transactions-hibernate4-4.0.4.jar!/"/>
         </CLASSES>
         <JAVADOC/>
         <SOURCES>
-          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/1.5.3.RELEASE/66831c90d21e17de10ede72a896a485a6385489/spring-boot-starter-test-1.5.3.RELEASE-sources.jar!/"/>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.atomikos/transactions-hibernate4/4.0.4/2015797332a2b74f468c603f693e246ee8697a29/transactions-hibernate4-4.0.4-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.atomikos/transactions/4.0.4/edd0e53234f892f99867307ccf5cd24b64087cb2/transactions-4.0.4.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.atomikos/transactions/4.0.4/29b9fdcfdef3b862c8cbde5c953a4b35a38b501a/transactions-4.0.4-sources.jar!/"/>
         </SOURCES>
       </library>
     </orderEntry>
@@ -79,6 +90,17 @@
         <JAVADOC/>
         <SOURCES>
           <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/2.6.1/aa83d736252e7898315f9d257a8937edc06e17d9/HikariCP-2.6.1-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/1.5.3.RELEASE/c04072c6637e9a7798ef152dc04581d2644b56ed/spring-boot-starter-test-1.5.3.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/1.5.3.RELEASE/66831c90d21e17de10ede72a896a485a6385489/spring-boot-starter-test-1.5.3.RELEASE-sources.jar!/"/>
         </SOURCES>
       </library>
     </orderEntry>
@@ -266,6 +288,50 @@
         <JAVADOC/>
         <SOURCES>
           <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aspects/4.3.8.RELEASE/2092dec6b829e155f5b2c15e2a4df9cd450ab3bf/spring-aspects-4.3.8.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.atomikos/transactions-jta/4.0.4/cd8b2495f526f671faebc1dcf42d05c5e415ec79/transactions-jta-4.0.4.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.atomikos/transactions-jta/4.0.4/3dc8d25c8ee70370cc67fdf835c62033478b1a40/transactions-jta-4.0.4-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.atomikos/transactions-jdbc/4.0.4/ee716df2e00b5be6f3e23d5b0a85a5c7e7c0aecc/transactions-jdbc-4.0.4.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.atomikos/transactions-jdbc/4.0.4/1ae55cec0bf1f56dca58709a3e4d11ba1bddbafc/transactions-jdbc-4.0.4-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.atomikos/transactions-api/4.0.4/55d7efff7e8793227dc6cb01b5be7d6d2f52f906/transactions-api-4.0.4.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.atomikos/transactions-api/4.0.4/ca152845b3ff1b855e154d5b05bcdbd6af0b95ee/transactions-api-4.0.4-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.atomikos/atomikos-util/4.0.4/d5bd44fa8867619a25b6a392b9c67a3d13a529e8/atomikos-util-4.0.4.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/sankey/.gradle/caches/modules-2/files-2.1/com.atomikos/atomikos-util/4.0.4/fa473c8e700e9b18833b29878b0bc4b5f3a1ca19/atomikos-util-4.0.4-sources.jar!/"/>
         </SOURCES>
       </library>
     </orderEntry>

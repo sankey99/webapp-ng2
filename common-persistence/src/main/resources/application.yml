@@ -1,13 +1,43 @@
 domainPackage : com.cs.common.persistence.domain
+peristenceUnit: common
 
 dataSource:
-    type  : com.zaxxer.hikari.HikariDataSource
-    dataSourceClassName : org.postgresql.ds.PGPoolingDataSource
+    type                  : com.zaxxer.hikari.HikariDataSource
+    dataSourceClassName   : org.postgresql.ds.PGPoolingDataSource
     dataSourceProperties  :
-      url            : jdbc:postgresql://localhost:5432/test
-      user       : admin
-      password       : admin
-
+      url                 : jdbc:postgresql://localhost:5432/test
+      user                : admin
+      password            : admin
 hibernate:
   hbm2ddl.auto: none
-  dialect: org.hibernate.dialect.PostgreSQLDialect
+  dialect     : org.hibernate.dialect.PostgreSQLDialect
+
+xa  :
+  peristenceUnit: xa-common
+  dataSource:
+      type                  : org.postgresql.xa.PGXADataSource
+      dataSourceProperties  :
+#        dataSourceClassName   : org.postgresql.xa.PGXADataSource
+        url                   : jdbc:postgresql://localhost:5432/test
+        user                  : admin
+        password              : admin
+      properties  :
+          forceShutdown       : false
+          transactionTimeout  : 10000
+          uniqueResourceName  : xaDs
+  hibernate :
+    hbm2ddl.auto: none
+    dialect     : org.hibernate.dialect.PostgreSQLDialect
+    hibernate.current_session_context_class : jta
+    hibernate.transaction.jta.platform      : com.atomikos.icatch.jta.hibernate4.AtomikosPlatform
+    hibernate.search.autoregister_listeners : false
+
+---
+
+spring  :
+  profiles  : test
+dataSource:
+    dataSourceClassName : org.h2.jdbcx.JdbcDataSource
+    dataSourceProperties  :
+      url            : jdbc:h2:~/test-db;MODE=PostgreSQL;MVCC=TRUE;DB_CLOSE_DELAY=-1
+      user           : sa

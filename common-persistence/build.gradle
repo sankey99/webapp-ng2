@@ -1,6 +1,7 @@
 buildscript {
     ext['hibernate.version'] = '5.2.10.Final'
     ext['jetty.version'] = '9.4.5.v20170502'
+//    ext['atomikos.version'] = '4.0.4'
 
     repositories {
         mavenLocal()
@@ -37,14 +38,22 @@ dependencies {
     }
     compile 'org.springframework.boot:spring-boot-starter-jetty:1.5.3.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-data-jpa:1.5.3.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-test:1.5.3.RELEASE'
+//    compile 'org.springframework.boot:spring-boot-starter-jta-atomikos:1.5.3.RELEASE'
+    compile 'com.atomikos:transactions-hibernate4:4.0.4'
+    compile 'com.atomikos:transactions:4.0.4'
+
     compile 'org.postgresql:postgresql:9.4.1212'
     compile 'com.zaxxer:HikariCP:2.6.1'
 
-    testCompile 'org.postgresql:postgresql:9.4.1212'
+    compile 'org.springframework.boot:spring-boot-starter-test:1.5.3.RELEASE'
     testCompile 'com.h2database:h2:1.4.195'
-//    testCompile 'junit:junit:4.12'
     testCompile 'org.testng:testng:6.9.6'
+}
+
+test {
+    useTestNG(){
+
+    }
 }
 
 publishing {

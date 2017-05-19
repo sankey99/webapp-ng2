@@ -1,6 +1,8 @@
 package com.cs.common;
 
 import com.cs.common.service.data.CommonJpaDataAccessService;
+import com.cs.common.service.data.CommonXAJpaDataAccessService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 
@@ -11,6 +13,6 @@ import javax.inject.Inject;
  */
 @SpringBootTest(classes = {TestApplication.class})
 public class IntegrationTestBase extends AbstractTestNGSpringContextTests {
-    @Inject
-    protected CommonJpaDataAccessService commonJpaDataAccessService;
+    @Inject protected CommonXAJpaDataAccessService commonXAJpaDataAccessService;
+    @Inject protected CommonJpaDataAccessService commonJpaDataAccessService;
 }

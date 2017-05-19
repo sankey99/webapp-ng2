@@ -14,26 +14,30 @@ import java.io.Serializable;
 @Transactional(readOnly = true)
 public class CommonJpaDataAccessService {
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "common")
     EntityManager entityManager;
 
-    @Transactional
+    protected  EntityManager getEntityManager(){
+        return  this.entityManager;
+    }
+
+    @Transactional()
     public void create(Serializable o) {
-        entityManager.persist(o);
+        getEntityManager().persist(o);
     }
 
     @Transactional
     public Serializable save(Serializable o) {
-        return entityManager.merge(o);
+        return getEntityManager().merge(o);
     }
 
     @Transactional
     public void delete(Serializable o) {
-        entityManager.remove(o);
+        getEntityManager().remove(o);
     }
 
     public Serializable find(Class clazz, Serializable o) {
-        return (Serializable) entityManager.find(clazz, o);
+        return (Serializable) getEntityManager().find(clazz, o);
 
     }
 }
